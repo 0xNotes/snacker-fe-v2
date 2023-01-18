@@ -1,14 +1,14 @@
 body {
   background-repeat: repeat;
-  background-image: url("../assets/pattern.png"), linear-gradient(180deg, rgba(42, 168, 242, 1) 0%, rgba(139, 212, 72, 1) 17%, rgba(250, 228, 66, 1) 34%, rgba(251, 169, 73, 1) 53%, rgba(255, 99, 85, 1) 72%, rgba(156, 79, 150, 1) 100%);
+  background-image: url("../assets/pattern.png"), linear-gradient(180deg, rgb(42, 168, 242) 0%, rgb(139, 212, 72) 17%, rgb(250, 228, 66) 34%, rgb(251, 169, 73) 53%, rgb(255, 99, 85) 72%, rgb(156, 79, 150) 100%);
 }
 
 .HomePage {
   display: flex;
   flex-direction: column;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   width: 100%;
-  height: 700vh;
+  height: 500vh;
   overflow-y: auto;
 }
 
@@ -20,6 +20,4 @@ body {
   position: fixed;
   background-color: black;
   box-shadow: 0px 17px 5px 6px rgba(0, 0, 0, 0.75);
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
