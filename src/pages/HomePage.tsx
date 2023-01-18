@@ -3,9 +3,9 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 export default function HomePage() {
   return (
     <div className="HomePage">
-      <div className="Socials">
+      {/* <div className="Socials">
         <ConnectButton />
-      </div>
+      </div> */}
       <div className="Header">
         <ConnectButton />
       </div>
