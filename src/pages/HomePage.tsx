@@ -12,7 +12,7 @@ export default function HomePage() {
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
-    console.log(position);
+    // console.log(scrollPosition);
   };
 
   useEffect(() => {
@@ -31,8 +31,8 @@ export default function HomePage() {
       <div className="Header">
         <ConnectButton />
       </div>
+      <div style={{height: "200px", width: "200px", backgroundColor: "red", marginTop: "75rem", marginRight: "140rem", transform: `translateX(${scrollPosition -2}px)`}}>test</div> 
       <div style={{ marginTop: "auto", marginBottom: "7rem", display: "flex", width: "100%", justifyContent: "center" }}>
-        {/* <div style={{height: "100px", width: "100px", backgroundColor: "red", marginTop: "10rem", transform: `translateY(${offset * 0.5}px)`}}></div> */}
         <img src={snacker}></img>
       </div>
     </div>
