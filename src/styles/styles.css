@@ -69,7 +69,7 @@ body {
 }
 .SnackerText {
   font-family: ibm;
-  font-size: 500%;
+  font-size: 800%;
   color: white;
   -webkit-animation-name: marquee;
           animation-name: marquee;
@@ -77,8 +77,8 @@ body {
           animation-iteration-count: infinite;
   -webkit-animation-duration: 30s;
           animation-duration: 30s;
-  -ms-writing-mode: tb-rl;
-      writing-mode: vertical-rl;
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
 }
 
 .SnackerTextReverse {
@@ -92,8 +92,8 @@ body {
           animation-iteration-count: infinite;
   -webkit-animation-duration: 30s;
           animation-duration: 30s;
-  -ms-writing-mode: tb-lr;
-      writing-mode: vertical-lr;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
 }
 
 .DescriptionBox {

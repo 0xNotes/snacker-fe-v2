@@ -11,16 +11,13 @@ export default function HomePage() {
 
   return (
     <div className="HomePage">
-
       <div className="Header">
         <ConnectButton />
       </div>
 
 
       <div className="ContentContainer">
-      <div className="SnackerText">SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER</div>
-
-
+      <div className="SnackerText">SNACKER</div>
         <div className="CenterContainer">
           <div className="DescriptionBox">
             <DescriptionBox description={words} />
@@ -39,7 +36,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="SnackerTextReverse">SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER</div>
+        <div className="SnackerTextReverse">SNACKER</div>
       </div>
     </div>
   );
