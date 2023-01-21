@@ -15,13 +15,11 @@ export default function HomePage() {
 
       <div className="ContentContainer">
 
-      <div className="SnackerText">SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER</div>
-      
+        <div className="SnackerText">SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER</div>
+
         <div className="CenterContainer">
-          <div className="DescriptionText">
-            <DescriptionBox />
-          </div>
-            {/* <div
+          <DescriptionBox />
+          {/* <div
               style={{
                 marginTop: "auto",
                 marginBottom: "7rem",
@@ -32,15 +30,15 @@ export default function HomePage() {
             >
               <img src={snacker}></img>
             </div> */}
-          </div>
+        </div>
 
-          <div className="SnackerTextReverse">
+        <div className="SnackerTextReverse">
           SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER
         </div>
 
-        </div>
-
       </div>
+
+    </div>
   );
 }
 
