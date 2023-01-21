@@ -8,26 +8,18 @@ import { transform } from "typescript";
 export default function HomePage() {
   return (
     <div className="HomePage">
+
       <div className="Header">
         <ConnectButton />
       </div>
 
       <div className="ContentContainer">
-        <div className="SnackerText">
-          SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER{" "}
-        </div>
+
+        <div className="SnackerText">SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER</div>
+
         <div className="CenterContainer">
           <DescriptionBox />
-          <div
-            style={{
-              marginTop: "auto",
-              marginBottom: "7rem",
-              display: "flex",
-              width: "100%",
-              justifyContent: "center",
-            }}
-          >
-            <div
+          {/* <div
               style={{
                 marginTop: "auto",
                 marginBottom: "7rem",
@@ -37,13 +29,15 @@ export default function HomePage() {
               }}
             >
               <img src={snacker}></img>
-            </div>
-          </div>
+            </div> */}
         </div>
+
         <div className="SnackerTextReverse">
-          SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER
+          SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER
         </div>
+
       </div>
+
     </div>
   );
 }

@@ -6,22 +6,20 @@
     width: 100%;
     height: 500vh;
     overflow-y: auto;
-    //overflow-x: hidden;
 }
 
 .ContentContainer{
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
     height: 100%;
     width: 100%;
     overflow-y: hidden;
 }
 
-
 .CenterContainer{
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: 100%;
 }
 
@@ -45,7 +43,6 @@
     padding-top: 1.25rem;
     padding-bottom: 1rem;
     z-index: 1;
-
 }
 
 @font-face{
@@ -54,6 +51,11 @@
 }
 
 @keyframes marquee{
+    from {transform: translateY(-100%) rotate(180deg)}
+    to {transform: translateY(100%) rotate(180deg)}
+}
+
+@keyframes marqueeReverse{
     from {transform: translateY(-100%)}
     to {transform: translateY(100%)}
 }
@@ -64,8 +66,8 @@
     color: white;
     animation-name: marquee;
     animation-iteration-count: infinite;
-    animation-duration: 30s;
-    writing-mode:vertical-lr;
+    animation-duration: 20s;
+    writing-mode:vertical-rl;
 
 }
 
@@ -73,10 +75,9 @@
     font-family: ibm;
     font-size: 800%;
     color: white;
-    animation-name: marquee;
+    animation-name: marqueeReverse;
     animation-direction: reverse;
     animation-iteration-count: infinite;
-    animation-duration: 30s;
+    animation-duration: 20s;
     writing-mode:vertical-rl;
-
 }

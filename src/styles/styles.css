@@ -15,7 +15,6 @@ body {
 .ContentContainer {
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
   height: 100%;
   width: 100%;
   overflow-y: hidden;
@@ -24,6 +23,7 @@ body {
 .CenterContainer {
   display: flex;
   flex-direction: column;
+  align-items: center;
   height: 100%;
 }
 
@@ -55,13 +55,29 @@ body {
 }
 @-webkit-keyframes marquee {
   from {
+    transform: translateY(-100%) rotate(180deg);
+  }
+  to {
+    transform: translateY(100%) rotate(180deg);
+  }
+}
+@keyframes marquee {
+  from {
+    transform: translateY(-100%) rotate(180deg);
+  }
+  to {
+    transform: translateY(100%) rotate(180deg);
+  }
+}
+@-webkit-keyframes marqueeReverse {
+  from {
     transform: translateY(-100%);
   }
   to {
     transform: translateY(100%);
   }
 }
-@keyframes marquee {
+@keyframes marqueeReverse {
   from {
     transform: translateY(-100%);
   }
@@ -77,30 +93,30 @@ body {
           animation-name: marquee;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-duration: 30s;
-          animation-duration: 30s;
-  -ms-writing-mode: tb-lr;
-      writing-mode: vertical-lr;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
 }
 
 .SnackerTextReverse {
   font-family: ibm;
   font-size: 800%;
   color: white;
-  -webkit-animation-name: marquee;
-          animation-name: marquee;
+  -webkit-animation-name: marqueeReverse;
+          animation-name: marqueeReverse;
   animation-direction: reverse;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-duration: 30s;
-          animation-duration: 30s;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
 }
 
 .DescriptionBox {
   display: flex;
-  width: 50vw;
+
   height: 50vh;
   background-color: #808080;
   opacity: 95%;
@@ -108,7 +124,6 @@ body {
   margin-top: 10rem;
   border: 1rem double black;
   padding: 1rem;
-  justify-content: center;
 }
 
 @font-face {
