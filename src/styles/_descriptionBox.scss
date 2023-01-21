@@ -1,6 +1,7 @@
 
 .DescriptionBox{
     position: center;
+    display: flex;
     width: 80%;
     height: 50vh;
     background-color: grey;
@@ -9,5 +10,14 @@
     border: 1rem double black;
     padding: 1rem;
     justify-content: center;
+}
 
+@font-face {
+    font-family: tandy;
+    src: url(../assets/tandy.ttf)
+  }
+.DescriptionText{
+    font-family: tandy;
+    font-size: 100%;
+    color: ghostwhite;
 }
