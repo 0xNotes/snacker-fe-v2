@@ -4,8 +4,6 @@ import { useEffect, useState } from "react";
 import DescriptionBox from "../components/DescriptionBox";
 import { transform } from "typescript";
 
-const words =
-  "Welcome to Snacker, bud. You're lucky to be here. Give me two of your favorite NFTs ;^) What will I do with them??";
 
 export default function HomePage() {
   return (
@@ -19,9 +17,7 @@ export default function HomePage() {
           SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER{" "}
         </div>
         <div className="CenterContainer">
-          <div className="DescriptionText">
-            <DescriptionBox />
-          </div>
+          <DescriptionBox />
           <div
             style={{
               marginTop: "auto",
