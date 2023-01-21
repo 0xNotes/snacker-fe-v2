@@ -18,7 +18,7 @@ export default function HomePage() {
         <div className="SnackerText">SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER</div>
 
         <div className="CenterContainer">
-          <DescriptionBox />
+          <DescriptionBox/>
           {/* <div
               style={{
                 marginTop: "auto",
