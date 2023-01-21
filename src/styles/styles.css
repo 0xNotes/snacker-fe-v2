@@ -10,7 +10,19 @@ body {
   width: 100%;
   height: 500vh;
   overflow-y: auto;
-  overflow-x: hidden;
+}
+
+.ContentContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.CenterContainer {
+  display: flex;
+  flex-direction: column;
 }
 
 .Socials {
@@ -33,6 +45,55 @@ body {
   padding-top: 1.25rem;
   padding-bottom: 1rem;
   z-index: 1;
+}
+
+@font-face {
+  font-family: ibm;
+  src: url(../assets/ibm.ttf);
+}
+@-webkit-keyframes marquee {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+@keyframes marquee {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+.SnackerText {
+  font-family: ibm;
+  font-size: 500%;
+  color: white;
+  -webkit-animation-name: marquee;
+          animation-name: marquee;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+}
+
+.SnackerTextReverse {
+  font-family: ibm;
+  font-size: 800%;
+  color: white;
+  -webkit-animation-name: marquee;
+          animation-name: marquee;
+  animation-direction: reverse;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
 }
 
 .DescriptionBox {
