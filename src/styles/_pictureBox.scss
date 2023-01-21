@@ -1,4 +1,5 @@
-.DescriptionBox {
+.PictureBox{
+
     display: flex;
     width: 50vw;
     height: 50vh;
@@ -15,9 +16,15 @@
     font-family: tandy;
     src: url(../assets/tandy.ttf)
   }
-
-.DescriptionText{
+.PictureFrame{
+    display: flex;
+    width: 90%;
+    height: 90%;
+    border: 1rem solid black;
+}
+.PictureBoxHeader{
     font-family: tandy;
     font-size: 200%;
     color: ghostwhite;
 }
+
