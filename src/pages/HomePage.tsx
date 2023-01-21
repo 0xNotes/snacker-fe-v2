@@ -4,8 +4,6 @@ import { useEffect, useState } from "react";
 import DescriptionBox from "../components/DescriptionBox";
 import { transform } from "typescript";
 
-const words =
-  "Welcome to Snacker, bud. You're lucky to be here. Give me two of your favorite NFTs ;^) What will I do with them??";
 
 export default function HomePage() {
   return (
@@ -16,21 +14,14 @@ export default function HomePage() {
       </div>
 
       <div className="ContentContainer">
-      <div className="SnackerText">SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER</div>
+
+      <div className="SnackerText">SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER</div>
+      
         <div className="CenterContainer">
           <div className="DescriptionText">
             <DescriptionBox />
           </div>
-          <div
-            style={{
-              marginTop: "auto",
-              marginBottom: "7rem",
-              display: "flex",
-              width: "100%",
-              justifyContent: "center",
-            }}
-          >
-            <div
+            {/* <div
               style={{
                 marginTop: "auto",
                 marginBottom: "7rem",
@@ -40,14 +31,16 @@ export default function HomePage() {
               }}
             >
               <img src={snacker}></img>
-            </div>
+            </div> */}
           </div>
+
+          <div className="SnackerTextReverse">
+          SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER
         </div>
-        <div className="SnackerTextReverse">
-          SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER
+
         </div>
+
       </div>
-    </div>
   );
 }
 

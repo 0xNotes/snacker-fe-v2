@@ -1,6 +1,5 @@
 
 .DescriptionBox{
-    position: center;
     display: flex;
     width: 80%;
     height: 50vh;
@@ -9,7 +8,6 @@
     margin-top: 10rem;
     border: 1rem double black;
     padding: 1rem;
-    justify-content: center;
 }
 
 @font-face {
@@ -18,6 +16,6 @@
   }
 .DescriptionText{
     font-family: tandy;
-    font-size: 100%;
+    font-size: 400%;
     color: ghostwhite;
 }
