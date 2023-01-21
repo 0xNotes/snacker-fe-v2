@@ -8,7 +8,6 @@ const words =
   "Welcome to Snacker, bud. You're lucky to be here. Give me two of your favorite NFTs ;^) What will I do with them??";
 
 export default function HomePage() {
-
   return (
     <div className="HomePage">
 
@@ -19,10 +18,18 @@ export default function HomePage() {
       <div className="ContentContainer">
       <div className="SnackerText">SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER</div>
         <div className="CenterContainer">
-          <div className="DescriptionBox">
-            <DescriptionBox description={words} />
+          <div className="DescriptionText">
+            <DescriptionBox />
           </div>
-          <div style={{ marginTop: "auto", marginBottom: "7rem", display: "flex", width: "100%", justifyContent: "center" }}>
+          <div
+            style={{
+              marginTop: "auto",
+              marginBottom: "7rem",
+              display: "flex",
+              width: "100%",
+              justifyContent: "center",
+            }}
+          >
             <div
               style={{
                 marginTop: "auto",
@@ -36,18 +43,16 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="SnackerTextReverse">SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER</div>
+        <div className="SnackerTextReverse">
+          SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER
+        </div>
       </div>
     </div>
   );
 }
 
-
 //Global tracking of scroll position
 // const [scrollPosition, setScrollPosition] = useState(0);
-
-
-
 
 // const handleScroll = () => {
 //   const position = window.pageYOffset;
@@ -63,7 +68,6 @@ export default function HomePage() {
 //   };
 // }
 
-
 // useEffect(() => {
 //   window.addEventListener("scroll", handleScroll);
 
@@ -72,4 +76,6 @@ export default function HomePage() {
 //   };
 // }, []);
 
-{/* <div style={{ height: "200px", width: "200px", backgroundColor: "red", marginTop: "75rem", marginRight: "140rem", transform: `translateX(${scrollPosition - 2}px)` }}>test</div> */ }
+{
+  /* <div style={{ height: "200px", width: "200px", backgroundColor: "red", marginTop: "75rem", marginRight: "140rem", transform: `translateX(${scrollPosition - 2}px)` }}>test</div> */
+}
