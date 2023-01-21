@@ -15,12 +15,14 @@
     flex-direction: row;
     height: 100%;
     width: 100%;
+    overflow-y: hidden;
 }
 
 
 .CenterContainer{
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .Socials {
@@ -58,12 +60,12 @@
 
 .SnackerText{
     font-family: ibm;
-    font-size: 500%;
+    font-size: 800%;
     color: white;
     animation-name: marquee;
     animation-iteration-count: infinite;
     animation-duration: 30s;
-    writing-mode:vertical-rl;
+    writing-mode:vertical-lr;
 
 }
 
@@ -75,6 +77,6 @@
     animation-direction: reverse;
     animation-iteration-count: infinite;
     animation-duration: 30s;
-    writing-mode:vertical-lr;
+    writing-mode:vertical-rl;
 
 }
