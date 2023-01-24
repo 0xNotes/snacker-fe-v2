@@ -87,8 +87,9 @@
     gap: var(--gap);
     animation-name: marqueeAnimLeft;
     animation-timing-function: linear;
-    animation-duration: 25s;
+    animation-duration: 30s;
     animation-iteration-count: infinite;
+    margin-left: 2rem;
 }
 
 .MarqueeInnerRight {
@@ -99,8 +100,9 @@
     gap: var(--gap);
     animation-name: marqueeAnimRight;
     animation-timing-function: linear;
-    animation-duration: 25s;
+    animation-duration: 30s;
     animation-iteration-count: infinite;
+    margin-right: 2rem;
 }
 
 
