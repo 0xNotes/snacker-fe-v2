@@ -5,7 +5,18 @@ import DescriptionBox from "../components/DescriptionBox";
 import { transform } from "typescript";
 
 
+
 export default function HomePage() {
+
+  function textRepeat(int: number){
+    let s = ""
+    for(let i = 0; i < (int-1); i++){
+      s += "SNACKER ";
+    }
+    s+= "SNACKER";
+    return s;
+  }
+
   return (
     <div className="HomePage">
 
@@ -15,10 +26,29 @@ export default function HomePage() {
 
       <div className="ContentContainer">
 
+
+          <div className="Marquee">
+            <div className="MarqueeInner">
+              <div className="SnackerText">{textRepeat(20)}</div>
+            </div>
+            <div className="MarqueeInner">
+              <div className="SnackerText">{textRepeat(20)}</div>
+            </div>
+            <div className="MarqueeInner">
+              <div className="SnackerText">{textRepeat(20)}</div>
+            </div>
+          </div>
+
+
+        {/* <div className="MarqueeContainer">
         <div className="SnackerText">SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER</div>
+        <div className="SnackerTextDelay">SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER</div>
+        <div className="SnackerTextDelay">SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER</div>
+        <div className="SnackerTextDelay">SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER</div>
+        </div> */}
 
         <div className="CenterContainer">
-          <DescriptionBox/>
+          <DescriptionBox />
           {/* <div
               style={{
                 marginTop: "auto",
