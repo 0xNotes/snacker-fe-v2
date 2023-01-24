@@ -53,7 +53,7 @@ body {
   font-family: ibm;
   src: url(../assets/ibm.ttf);
 }
-@-webkit-keyframes marqueeAnim {
+@-webkit-keyframes marqueeAnimLeft {
   from {
     transform: translateY(0) rotate(180deg);
   }
@@ -61,7 +61,7 @@ body {
     transform: translateY(calc(-100% - var(--gap))) rotate(180deg);
   }
 }
-@keyframes marqueeAnim {
+@keyframes marqueeAnimLeft {
   from {
     transform: translateY(0) rotate(180deg);
   }
@@ -69,20 +69,20 @@ body {
     transform: translateY(calc(-100% - var(--gap))) rotate(180deg);
   }
 }
-@-webkit-keyframes marqueeReverse {
+@-webkit-keyframes marqueeAnimRight {
   from {
-    transform: translateY(-100%);
+    transform: translateY(0);
   }
   to {
-    transform: translateY(100%);
+    transform: translateY(calc(-100% - var(--gap)));
   }
 }
-@keyframes marqueeReverse {
+@keyframes marqueeAnimRight {
   from {
-    transform: translateY(-100%);
+    transform: translateY(0);
   }
   to {
-    transform: translateY(100%);
+    transform: translateY(calc(-100% - var(--gap)));
   }
 }
 .Marquee {
@@ -96,21 +96,36 @@ body {
   display: inline-block;
   justify-content: space-evenly;
   gap: var(--gap);
-  border: 2px solid violet;
 }
 
-.MarqueeInner {
+.MarqueeInnerLeft {
   flex-shrink: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   min-height: 100%;
   gap: var(--gap);
-  -webkit-animation-name: marqueeAnim;
-          animation-name: marqueeAnim;
+  -webkit-animation-name: marqueeAnimLeft;
+          animation-name: marqueeAnimLeft;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  -webkit-animation-duration: 20s;
-          animation-duration: 20s;
+  -webkit-animation-duration: 25s;
+          animation-duration: 25s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.MarqueeInnerRight {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-evenly;
+  min-height: 100%;
+  gap: var(--gap);
+  -webkit-animation-name: marqueeAnimRight;
+          animation-name: marqueeAnimRight;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 25s;
+          animation-duration: 25s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
@@ -119,8 +134,10 @@ body {
   white-space: nowrap;
   font-family: ibm;
   font-size: 800%;
+  color: ghostwhite;
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .DescriptionBox {

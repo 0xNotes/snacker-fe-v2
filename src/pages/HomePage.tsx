@@ -28,24 +28,16 @@ export default function HomePage() {
 
 
           <div className="Marquee">
-            <div className="MarqueeInner">
+            <div className="MarqueeInnerLeft">
               <div className="SnackerText">{textRepeat(20)}</div>
             </div>
-            <div className="MarqueeInner">
-              <div className="SnackerText">{textRepeat(20)}</div>
+            <div className="MarqueeInnerLeft">
+              <div className="SnackerText" style={{marginBottom: "6rem"}}>{textRepeat(20)}</div>
             </div>
-            <div className="MarqueeInner">
-              <div className="SnackerText">{textRepeat(20)}</div>
+            <div className="MarqueeInnerLeft">
+              <div className="SnackerText" style={{marginBottom: "6rem"}}>{textRepeat(20)}</div>
             </div>
           </div>
-
-
-        {/* <div className="MarqueeContainer">
-        <div className="SnackerText">SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER</div>
-        <div className="SnackerTextDelay">SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER</div>
-        <div className="SnackerTextDelay">SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER</div>
-        <div className="SnackerTextDelay">SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER</div>
-        </div> */}
 
         <div className="CenterContainer">
           <DescriptionBox />
@@ -62,9 +54,17 @@ export default function HomePage() {
             </div> */}
         </div>
 
-        <div className="SnackerTextReverse">
-          SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER
-        </div>
+        <div className="Marquee">
+            <div className="MarqueeInnerRight">
+              <div className="SnackerText">{textRepeat(20)}</div>
+            </div>
+            <div className="MarqueeInnerRight">
+              <div className="SnackerText" style={{marginBottom: "6rem"}}>{textRepeat(20)}</div>
+            </div>
+            <div className="MarqueeInnerRight">
+              <div className="SnackerText" style={{marginBottom: "6rem"}}>{textRepeat(20)}</div>
+            </div>
+          </div>
 
       </div>
 

@@ -50,7 +50,7 @@
     src: url(../assets/ibm.ttf);
 }
 
-@keyframes marqueeAnim {
+@keyframes marqueeAnimLeft {
     from {
       transform: translateY(0) rotate(180deg);
     }
@@ -59,15 +59,14 @@
     }
   }
 
-@keyframes marqueeReverse {
+  @keyframes marqueeAnimRight {
     from {
-        transform: translateY(-100%)
+      transform: translateY(0);
     }
-
     to {
-        transform: translateY(100%)
+      transform: translateY(calc(-100% - var(--gap)));
     }
-}
+  }
 
 
 .Marquee {
@@ -78,19 +77,29 @@
     display:inline-block;
     justify-content: space-evenly;
     gap: var(--gap);
-    border: 2px solid violet;
-
 }
 
-.MarqueeInner {
+.MarqueeInnerLeft {
     flex-shrink: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     min-height: 100%;
     gap: var(--gap);
-    animation-name: marqueeAnim;
+    animation-name: marqueeAnimLeft;
     animation-timing-function: linear;
-    animation-duration: 20s;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+}
+
+.MarqueeInnerRight {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-evenly;
+    min-height: 100%;
+    gap: var(--gap);
+    animation-name: marqueeAnimRight;
+    animation-timing-function: linear;
+    animation-duration: 25s;
     animation-iteration-count: infinite;
 }
 
@@ -99,5 +108,8 @@
     white-space: nowrap;
     font-family: ibm;
     font-size: 800%;
+    color: ghostwhite;
     writing-mode: vertical-rl;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
 }
