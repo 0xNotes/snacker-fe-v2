@@ -108,8 +108,8 @@ body {
           animation-name: marqueeAnimLeft;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  -webkit-animation-duration: 30s;
-          animation-duration: 30s;
+  -webkit-animation-duration: 45s;
+          animation-duration: 45s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   margin-left: 2rem;
@@ -125,8 +125,8 @@ body {
           animation-name: marqueeAnimRight;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  -webkit-animation-duration: 30s;
-          animation-duration: 30s;
+  -webkit-animation-duration: 45s;
+          animation-duration: 45s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   margin-right: 2rem;

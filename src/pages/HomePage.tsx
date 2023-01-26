@@ -26,14 +26,16 @@ export default function HomePage() {
 
       <div className="ContentContainer">
 
-
+      {/* style={{marginTop: "3rem"}} */}
           <div className="Marquee">
-            <div className="MarqueeInnerLeft">
-              <div className="SnackerText" style={{marginTop: "3rem"}}>{textRepeat(20)}</div>
-            </div>
             <div className="MarqueeInnerLeft">
               <div className="SnackerText">{textRepeat(20)}</div>
             </div>
+            <pre>" "</pre>
+            <div className="MarqueeInnerLeft">
+              <div className="SnackerText">{textRepeat(20)}</div>
+            </div>
+            <pre>" "</pre>
             <div className="MarqueeInnerLeft">
               <div className="SnackerText">{textRepeat(20)}</div>
             </div>
@@ -56,11 +58,13 @@ export default function HomePage() {
 
         <div className="Marquee">
             <div className="MarqueeInnerRight">
-              <div className="SnackerText" style={{marginBottom: "3rem"}}>{textRepeat(20)}</div>
+              <div className="SnackerText">{textRepeat(20)}</div>
             </div>
+            <pre>" "</pre>
             <div className="MarqueeInnerRight">
               <div className="SnackerText">{textRepeat(20)}</div>
             </div>
+            <pre>" "</pre>
             <div className="MarqueeInnerRight">
               <div className="SnackerText">{textRepeat(20)}</div>
             </div>

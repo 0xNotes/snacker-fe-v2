@@ -2,9 +2,17 @@ export default function DescriptionBox() {
   return (
     <div className="DescriptionBox">
       <div className="DescriptionText">
-      Umm well hi, I'm Snacker-chan. It's nice to meet you!! ^_^ I'm not sure
-        if you want to... but c-could I see two of your NFTs, please? I-I'm
-        sorry!! I didn't mean to be rude!!
+        Hey, woah hey!
+        <br/><br/>
+        This is like, well, a very unexpected preview of a thing. 
+        <br/><br/>
+        It's gonna look better than this, I swear.
+        <br/><br/>
+        But HEY! The bright side is im not going to drain your wallet.
+        <br/><br/>
+        I'm, heh not drain gang like that.
+        <br/><br/>
+        ^__^
       </div>
     </div>
   );
