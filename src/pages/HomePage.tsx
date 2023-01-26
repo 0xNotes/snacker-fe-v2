@@ -14,13 +14,49 @@ import ape3 from "../assets/contentImages/ape3.png";
 export default function HomePage() {
 
   const contentImages = [ape, ape2, ape3];
+  const styleImages = [ape3, ape, ape2];
+  const outputImages = [ape3, ape3, ape];
 
-  function textRepeat(int: number){
+  const [position, setPosition] = useState(0)
+  const [contentImage, setContentImage] = useState(contentImages[position]);
+  const [styleImage, setStyleImage] = useState(styleImages[position]);
+  const [outputImage, setOutputImage] = useState(outputImages[position]);
+
+  const mql = window.matchMedia("(min-width: 1300px)");
+  const [isLargeScreen, setIsLargeScreen] = useState(mql.matches);
+
+  useEffect(() => {
+    const handleResize = (e: MediaQueryListEvent) => {
+      setIsLargeScreen(e.matches);
+    };
+    mql.addListener(handleResize);
+    return () => {
+      mql.removeListener(handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPosition((position + 1) % contentImages.length);
+      setContentImage(contentImages[position]);
+      setStyleImage(styleImages[position]);
+      setOutputImage(outputImages[position]);
+    }, 3500);
+    return () => clearInterval(interval);
+  }, [position]);
+
+  function pickImage(imgList: any[], counter: number, setter: React.Dispatch<React.SetStateAction<number>>) {
+    setter(counter++ % imgList.length)
+    return (imgList[counter]);
+  }
+
+
+  function textRepeat(int: number) {
     let s = ""
-    for(let i = 0; i < (int-1); i++){
+    for (let i = 0; i < (int - 1); i++) {
       s += "SNACKER ";
     }
-    s+= "SNACKER";
+    s += "SNACKER";
     return s;
   }
 
@@ -33,7 +69,8 @@ export default function HomePage() {
 
       <div className="ContentContainer">
 
-      {/* style={{marginTop: "3rem"}} */}
+
+        {isLargeScreen ? (
           <div className="Marquee">
             <div className="MarqueeInnerLeft">
               <div className="SnackerText">{textRepeat(20)}</div>
@@ -47,20 +84,22 @@ export default function HomePage() {
               <div className="SnackerText">{textRepeat(20)}</div>
             </div>
           </div>
+        ) : (<div />)}
+
 
         <div className="CenterContainer">
           <DescriptionBox />
           <div className="ContentStyleContainer">
-          <PictureBox2 text="Content Image" image={ape}/>
-          <PictureBox2 text="Style Image" image={ape2}/>
+            <PictureBox2 text="Content Image" image={contentImage} />
+            <PictureBox2 text="Style Image" image={styleImage} />
           </div>
           <div className="OutputContainer">
-          <PictureBox2 text="Output Image" image={ape3}/>
+            <PictureBox2 text="Output Image" image={outputImage} />
           </div>
 
           <div className="KillContainer">
-          <KillBox/>
-          <PictureBox2 text="Recent Kills" image={ape}/>
+            <KillBox />
+            <PictureBox2 text="Recent Kills" image={ape} />
           </div>
 
           {/* <div
@@ -76,19 +115,20 @@ export default function HomePage() {
             </div> */}
         </div>
 
-        <div className="Marquee">
-            <div className="MarqueeInnerRight">
-              <div className="SnackerText">{textRepeat(20)}</div>
-            </div>
-            <pre>" "</pre>
-            <div className="MarqueeInnerRight">
-              <div className="SnackerText">{textRepeat(20)}</div>
-            </div>
-            <pre>" "</pre>
-            <div className="MarqueeInnerRight">
-              <div className="SnackerText">{textRepeat(20)}</div>
-            </div>
+        {isLargeScreen ? (<div className="Marquee">
+          <div className="MarqueeInnerRight">
+            <div className="SnackerText">{textRepeat(20)}</div>
           </div>
+          <pre>" "</pre>
+          <div className="MarqueeInnerRight">
+            <div className="SnackerText">{textRepeat(20)}</div>
+          </div>
+          <pre>" "</pre>
+          <div className="MarqueeInnerRight">
+            <div className="SnackerText">{textRepeat(20)}</div>
+          </div>
+        </div>) : (<div />)}
+
 
       </div>
 

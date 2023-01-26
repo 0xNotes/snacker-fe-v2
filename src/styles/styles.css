@@ -42,6 +42,13 @@ body {
   width: 70%;
   justify-content: space-between;
 }
+@media (max-width: 1250px) {
+  .ContentStyleContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+}
 
 .OutputContainer {
   display: flex;
@@ -181,11 +188,13 @@ body {
   margin-top: 10rem;
   padding: 1rem;
   border: 16px double black;
+  overflow-y: auto;
+  overflow-wrap: break-word;
 }
 
 .DescriptionText {
   font-family: tandy;
-  font-size: 200%;
+  font-size: 2em;
   color: ghostwhite;
 }
 
@@ -256,7 +265,7 @@ body {
 .KillHeader {
   font-family: ibm;
   font-size: 250%;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   color: ghostwhite;
   text-align: center;
 }
@@ -265,4 +274,18 @@ body {
   font-family: tandy;
   font-size: 200%;
   color: ghostwhite;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+$breakpoint arguement choices:
+- phone
+- tab-port
+- big-desktop
+ORDER: Base + typography > general layout + grid > page layout > components
+1em = 16px
+*//*# sourceMappingURL=styles.css.map */

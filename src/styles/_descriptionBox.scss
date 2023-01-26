@@ -9,11 +9,16 @@
     margin-top: 10rem;
     padding: 1rem;
     border: 16px double black;
+
+    //testing
+    overflow-y: auto;
+    overflow-wrap: break-word;
 }
 
 
 .DescriptionText{
     font-family: tandy;
-    font-size: 200%;
+    //testing
+    font-size: 2em;
     color: ghostwhite;
 }

@@ -29,6 +29,16 @@
   margin-top: 7rem;
   width: 70%;
   justify-content: space-between;
+
+  @media (max-width: 1250px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;    
+  }
+
+  // @include respond(big-tablet) {
+  //   flex-direction: column;
+  // }
 }
 
 .OutputContainer {
@@ -98,6 +108,8 @@
   display: inline-block;
   justify-content: space-evenly;
   gap: var(--gap);
+
+  
 }
 
 .MarqueeInnerLeft {
