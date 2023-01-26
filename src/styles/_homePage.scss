@@ -6,22 +6,20 @@
     width: 100%;
     height: 500vh;
     overflow-y: auto;
-    //overflow-x: hidden;
 }
 
-.ContentContainer{
+.ContentContainer {
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
     height: 100%;
     width: 100%;
     overflow-y: hidden;
 }
 
-
-.CenterContainer{
+.CenterContainer {
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: 100%;
 }
 
@@ -45,38 +43,75 @@
     padding-top: 1.25rem;
     padding-bottom: 1rem;
     z-index: 1;
-
 }
 
-@font-face{
+@font-face {
     font-family: ibm;
     src: url(../assets/ibm.ttf);
 }
 
-@keyframes marquee{
-    from {transform: translateY(-100%)}
-    to {transform: translateY(100%)}
+@keyframes marqueeAnimLeft {
+    from {
+      transform: translateY(0) rotate(180deg);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap))) rotate(180deg);
+    }
+  }
+
+  @keyframes marqueeAnimRight {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+
+
+.Marquee {
+    --gap: 1rem;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    display:inline-block;
+    justify-content: space-evenly;
+    gap: var(--gap);
 }
 
-.SnackerText{
-    font-family: ibm;
-    font-size: 800%;
-    color: white;
-    animation-name: marquee;
-    animation-iteration-count: infinite;
+.MarqueeInnerLeft {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-evenly;
+    min-height: 100%;
+    gap: var(--gap);
+    animation-name: marqueeAnimLeft;
+    animation-timing-function: linear;
     animation-duration: 30s;
-    writing-mode:vertical-lr;
-
+    animation-iteration-count: infinite;
+    margin-left: 2rem;
 }
 
-.SnackerTextReverse{
+.MarqueeInnerRight {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-evenly;
+    min-height: 100%;
+    gap: var(--gap);
+    animation-name: marqueeAnimRight;
+    animation-timing-function: linear;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    margin-right: 2rem;
+}
+
+
+.SnackerText {
+    white-space: nowrap;
     font-family: ibm;
     font-size: 800%;
-    color: white;
-    animation-name: marquee;
-    animation-direction: reverse;
-    animation-iteration-count: infinite;
-    animation-duration: 30s;
-    writing-mode:vertical-rl;
+    color: ghostwhite;
+    writing-mode: vertical-rl;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
 }

@@ -15,7 +15,6 @@ body {
 .ContentContainer {
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
   height: 100%;
   width: 100%;
   overflow-y: hidden;
@@ -24,6 +23,7 @@ body {
 .CenterContainer {
   display: flex;
   flex-direction: column;
+  align-items: center;
   height: 100%;
 }
 
@@ -53,62 +53,106 @@ body {
   font-family: ibm;
   src: url(../assets/ibm.ttf);
 }
-@-webkit-keyframes marquee {
+@-webkit-keyframes marqueeAnimLeft {
   from {
-    transform: translateY(-100%);
+    transform: translateY(0) rotate(180deg);
   }
   to {
-    transform: translateY(100%);
+    transform: translateY(calc(-100% - var(--gap))) rotate(180deg);
   }
 }
-@keyframes marquee {
+@keyframes marqueeAnimLeft {
   from {
-    transform: translateY(-100%);
+    transform: translateY(0) rotate(180deg);
   }
   to {
-    transform: translateY(100%);
+    transform: translateY(calc(-100% - var(--gap))) rotate(180deg);
   }
 }
-.SnackerText {
-  font-family: ibm;
-  font-size: 800%;
-  color: white;
-  -webkit-animation-name: marquee;
-          animation-name: marquee;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-duration: 30s;
-          animation-duration: 30s;
-  -ms-writing-mode: tb-lr;
-      writing-mode: vertical-lr;
+@-webkit-keyframes marqueeAnimRight {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+@keyframes marqueeAnimRight {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+.Marquee {
+  --gap: 1rem;
+  display: flex;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: inline-block;
+  justify-content: space-evenly;
+  gap: var(--gap);
 }
 
-.SnackerTextReverse {
-  font-family: ibm;
-  font-size: 800%;
-  color: white;
-  -webkit-animation-name: marquee;
-          animation-name: marquee;
-  animation-direction: reverse;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+.MarqueeInnerLeft {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-evenly;
+  min-height: 100%;
+  gap: var(--gap);
+  -webkit-animation-name: marqueeAnimLeft;
+          animation-name: marqueeAnimLeft;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
   -webkit-animation-duration: 30s;
           animation-duration: 30s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  margin-left: 2rem;
+}
+
+.MarqueeInnerRight {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-evenly;
+  min-height: 100%;
+  gap: var(--gap);
+  -webkit-animation-name: marqueeAnimRight;
+          animation-name: marqueeAnimRight;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  margin-right: 2rem;
+}
+
+.SnackerText {
+  white-space: nowrap;
+  font-family: ibm;
+  font-size: 800%;
+  color: ghostwhite;
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .DescriptionBox {
   display: flex;
-  width: 50vw;
+  width: 45vw;
   height: 50vh;
   background-color: #808080;
   opacity: 95%;
+  margin-top: 10rem;
   box-shadow: 0px 17px 5px 6px rgba(0, 0, 0, 0.75);
   margin-top: 10rem;
-  border: 1rem double black;
   padding: 1rem;
-  justify-content: center;
+  border: 1rem double black;
 }
 
 @font-face {

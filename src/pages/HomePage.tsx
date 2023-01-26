@@ -5,17 +5,40 @@ import DescriptionBox from "../components/DescriptionBox";
 import PictureBox from "../components/PictureBox";
 import { transform } from "typescript";
 
+
 export default function HomePage() {
+
+  function textRepeat(int: number){
+    let s = ""
+    for(let i = 0; i < (int-1); i++){
+      s += "SNACKER ";
+    }
+    s+= "SNACKER";
+    return s;
+  }
+
   return (
     <div className="HomePage">
+
       <div className="Header">
         <ConnectButton />
       </div>
 
       <div className="ContentContainer">
-        <div className="SnackerText">
-          SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER{" "}
-        </div>
+
+
+          <div className="Marquee">
+            <div className="MarqueeInnerLeft">
+              <div className="SnackerText" style={{marginTop: "3rem"}}>{textRepeat(20)}</div>
+            </div>
+            <div className="MarqueeInnerLeft">
+              <div className="SnackerText">{textRepeat(20)}</div>
+            </div>
+            <div className="MarqueeInnerLeft">
+              <div className="SnackerText">{textRepeat(20)}</div>
+            </div>
+          </div>
+
         <div className="CenterContainer">
           <DescriptionBox />
           <PictureBox />
@@ -29,6 +52,8 @@ export default function HomePage() {
             }}
           >
             <div
+
+          {/* <div
               style={{
                 marginTop: "auto",
                 marginBottom: "7rem",
@@ -38,13 +63,23 @@ export default function HomePage() {
               }}
             >
               <img src={snacker}></img>
+            </div> */}
+        </div>
+
+        <div className="Marquee">
+            <div className="MarqueeInnerRight">
+              <div className="SnackerText" style={{marginBottom: "3rem"}}>{textRepeat(20)}</div>
+            </div>
+            <div className="MarqueeInnerRight">
+              <div className="SnackerText">{textRepeat(20)}</div>
+            </div>
+            <div className="MarqueeInnerRight">
+              <div className="SnackerText">{textRepeat(20)}</div>
             </div>
           </div>
-        </div>
-        <div className="SnackerTextReverse">
-          SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER SNACKER
-        </div>
+
       </div>
+
     </div>
   );
 }
