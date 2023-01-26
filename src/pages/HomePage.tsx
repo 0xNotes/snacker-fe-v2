@@ -53,7 +53,7 @@ export default function HomePage() {
               justifyContent: "center",
             }}
           >
-            <div
+          </div>
 
           {/* <div
               style={{
