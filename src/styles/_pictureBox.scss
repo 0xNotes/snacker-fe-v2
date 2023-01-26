@@ -1,30 +1,52 @@
-.PictureBox{
+.PictureBox {
 
-    display: flex;
-    width: 50vw;
-    height: 50vh;
-    background-color: #808080;
-    opacity: 95%;
-    box-shadow: 0px 17px 5px 6px rgba(0, 0, 0, 0.75);
-    margin-top: 10rem;
-    border: 1rem double black;
-    padding: 1rem;
-    justify-content: center;
-  }
+  display: flex;
+  width: 50vw;
+  height: 50vh;
+  background-color: #808080;
+  opacity: 95%;
 
-@font-face {
-    font-family: tandy;
-    src: url(../assets/tandy.ttf)
-  }
-.PictureFrame{
-    display: flex;
-    width: 90%;
-    height: 90%;
-    border: 1rem solid black;
-}
-.PictureBoxHeader{
-    font-family: tandy;
-    font-size: 200%;
-    color: ghostwhite;
+  box-shadow: 0px 17px 5px 6px rgba(0, 0, 0, 0.75);
+  margin-top: 10rem;
+  border: 1rem double black;
+  padding: 1rem;
+  justify-content: center;
 }
 
+.PictureBox2 {
+  display: flex;
+  width: 20rem;
+  height: 20rem;
+  background-color: rgb(128, 128, 128, 0.95);
+  flex-direction: column;
+  box-shadow: 0px 17px 5px 6px rgba(0, 0, 0, 0.75);
+  border: 16px double black;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.PictureText {
+  font-family: tandy;
+  font-size: 250%;
+  color: ghostwhite;
+}
+
+.ImageFix {
+  opacity: 100% !important;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.PictureFrame {
+  display: flex;
+  width: 90%;
+  height: 90%;
+  border: 1rem solid black;
+}
+
+.PictureBoxHeader {
+  font-family: tandy;
+  font-size: 200%;
+  color: ghostwhite;
+}

@@ -3,6 +3,14 @@ body {
   background-image: url("../assets/pattern.png"), linear-gradient(180deg, rgb(42, 168, 242) 0%, rgb(139, 212, 72) 17%, rgb(250, 228, 66) 34%, rgb(251, 169, 73) 53%, rgb(255, 99, 85) 72%, rgb(156, 79, 150) 100%);
 }
 
+@font-face {
+  font-family: tandy;
+  src: url(../assets/tandy.ttf);
+}
+@font-face {
+  font-family: ibm;
+  src: url(../assets/ibm.ttf);
+}
 .HomePage {
   display: flex;
   flex-direction: column;
@@ -25,6 +33,29 @@ body {
   flex-direction: column;
   align-items: center;
   height: 100%;
+  width: 100%;
+}
+
+.ContentStyleContainer {
+  display: flex;
+  margin-top: 7rem;
+  width: 70%;
+  justify-content: space-between;
+}
+
+.OutputContainer {
+  display: flex;
+  display: flex;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.KillContainer {
+  display: flex;
+  margin-top: 7rem;
+  width: 80%;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .Socials {
@@ -49,10 +80,6 @@ body {
   z-index: 1;
 }
 
-@font-face {
-  font-family: ibm;
-  src: url(../assets/ibm.ttf);
-}
 @-webkit-keyframes marqueeAnimLeft {
   from {
     transform: translateY(0) rotate(180deg);
@@ -61,6 +88,7 @@ body {
     transform: translateY(calc(-100% - var(--gap))) rotate(180deg);
   }
 }
+
 @keyframes marqueeAnimLeft {
   from {
     transform: translateY(0) rotate(180deg);
@@ -144,21 +172,17 @@ body {
 
 .DescriptionBox {
   display: flex;
-  width: 45vw;
+  width: 50vw;
   height: 50vh;
-  background-color: #808080;
+  background-color: rgba(128, 128, 128, 0.95);
   opacity: 95%;
   margin-top: 10rem;
   box-shadow: 0px 17px 5px 6px rgba(0, 0, 0, 0.75);
   margin-top: 10rem;
   padding: 1rem;
-  border: 1rem double black;
+  border: 16px double black;
 }
 
-@font-face {
-  font-family: tandy;
-  src: url(../assets/tandy.ttf);
-}
 .DescriptionText {
   font-family: tandy;
   font-size: 200%;
@@ -178,10 +202,31 @@ body {
   justify-content: center;
 }
 
-@font-face {
-  font-family: tandy;
-  src: url(../assets/tandy.ttf);
+.PictureBox2 {
+  display: flex;
+  width: 20rem;
+  height: 20rem;
+  background-color: rgba(128, 128, 128, 0.95);
+  flex-direction: column;
+  box-shadow: 0px 17px 5px 6px rgba(0, 0, 0, 0.75);
+  border: 16px double black;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
 }
+
+.PictureText {
+  font-family: tandy;
+  font-size: 250%;
+  color: ghostwhite;
+}
+
+.ImageFix {
+  opacity: 100% !important;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .PictureFrame {
   display: flex;
   width: 90%;
@@ -190,6 +235,33 @@ body {
 }
 
 .PictureBoxHeader {
+  font-family: tandy;
+  font-size: 200%;
+  color: ghostwhite;
+}
+
+.KillBox {
+  display: flex;
+  flex-direction: column;
+  width: 35vw;
+  height: 65vh;
+  background-color: rgba(128, 128, 128, 0.95);
+  opacity: 95%;
+  box-shadow: 0px 17px 5px 6px rgba(0, 0, 0, 0.75);
+  padding: 1rem;
+  border: 16px double black;
+  overflow-y: auto;
+}
+
+.KillHeader {
+  font-family: ibm;
+  font-size: 250%;
+  margin-bottom: 2rem;
+  color: ghostwhite;
+  text-align: center;
+}
+
+.KillText {
   font-family: tandy;
   font-size: 200%;
   color: ghostwhite;
