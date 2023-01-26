@@ -2,8 +2,8 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 import snacker from "../assets/snacker.png";
 import { useEffect, useState } from "react";
 import DescriptionBox from "../components/DescriptionBox";
+import PictureBox from "../components/PictureBox";
 import { transform } from "typescript";
-
 
 
 export default function HomePage() {
@@ -41,6 +41,18 @@ export default function HomePage() {
 
         <div className="CenterContainer">
           <DescriptionBox />
+          <PictureBox />
+          <div
+            style={{
+              marginTop: "auto",
+              marginBottom: "7rem",
+              display: "flex",
+              width: "100%",
+              justifyContent: "center",
+            }}
+          >
+            <div
+
           {/* <div
               style={{
                 marginTop: "auto",
