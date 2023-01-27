@@ -1,9 +1,5 @@
 import React from 'react';
 import "./styles/styles.css";
-
-
-import HomePage from './pages/HomePage';
-
 import '@rainbow-me/rainbowkit/styles.css';
 
 import {
@@ -14,6 +10,11 @@ import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import { mainnet, polygon, optimism, arbitrum } from 'wagmi/chains';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import HomePage from './pages/HomePage';
+import KillList from './pages/KillList';
+import Snacker from './pages/Snacker';
+
 const { chains, provider } = configureChains(
   [mainnet, polygon, optimism, arbitrum],
   [
@@ -38,7 +39,13 @@ function App() {
   return (
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider coolMode chains={chains}>
-        <HomePage />
+        <BrowserRouter>
+        <Routes>
+        <Route path ="/" element={<HomePage />}/>
+        <Route path ="/KillList" element={<KillList/>}/>
+        <Route path ="/Snacker" element={<Snacker/>}/>
+        </Routes>
+        </BrowserRouter>
       </RainbowKitProvider>
     </WagmiConfig>
   );
