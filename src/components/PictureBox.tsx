@@ -1,8 +1,14 @@
-export default function PictureBox() {
-  return (
-    <div className="PictureBox">
-      <div className="PictureBoxHeader">Featured NFTs</div>
-      <div className="PictureFrame"></div>
-    </div>
-  );
+type Props = {
+    text: string;
+    image: any;
 }
+
+export default function PictureBox({text, image}: Props) {
+    return (
+      <div className="PictureBox">
+        <div className="PictureHeader">{text}</div>
+        <img className="ImageFix" src={image}></img>
+      </div>
+    );
+  }
+  

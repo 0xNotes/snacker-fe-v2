@@ -2,7 +2,7 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 import snacker from "../assets/snacker.png";
 import { useEffect, useState } from "react";
 import DescriptionBox from "../components/DescriptionBox";
-import PictureBox2 from "../components/PictureBox2";
+import PictureBox from "../components/PictureBox";
 import KillBox from "../components/KillBox";
 
 import ape from "../assets/contentImages/ape.png";
@@ -64,7 +64,14 @@ export default function HomePage() {
     <div className="HomePage">
 
       <div className="Header">
+        <div className="HeaderLinkContainer">
+        <a href="https://www.google.com">Github</a>
+        <a href="https://www.google.com">Medium</a>
+        <a href="https://www.google.com">Discord</a>
+        </div>
+        <div className="ConnectContainer">
         <ConnectButton />
+        </div>
       </div>
 
       <div className="ContentContainer">
@@ -90,16 +97,16 @@ export default function HomePage() {
         <div className="CenterContainer">
           <DescriptionBox />
           <div className="ContentStyleContainer">
-            <PictureBox2 text="Content Image" image={contentImage} />
-            <PictureBox2 text="Style Image" image={styleImage} />
+            <PictureBox text="CONTENT IMAGE" image={contentImage} />
+            <PictureBox text="STYLE IMAGE" image={styleImage} />
           </div>
           <div className="OutputContainer">
-            <PictureBox2 text="Output Image" image={outputImage} />
+            <PictureBox text="OUTPUT IMAGE" image={outputImage} />
           </div>
 
           <div className="KillContainer">
             <KillBox />
-            <PictureBox2 text="Recent Kills" image={ape} />
+            <PictureBox text="Recent Kills" image={ape} />
           </div>
 
           {/* <div

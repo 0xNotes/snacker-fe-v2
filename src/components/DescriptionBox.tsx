@@ -1,6 +1,7 @@
 export default function DescriptionBox() {
   return (
     <div className="DescriptionBox">
+      <div className="DescriptionHeader">SNACKER</div>
       <div className="DescriptionText">
         Snacker is an experiment in NFT Minting. Snacker requires three things to mint. A Content Image, a Style Image and a mint fee.
         <br /><br />

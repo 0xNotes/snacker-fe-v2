@@ -3,6 +3,44 @@ body {
   background-image: url("../assets/pattern.png"), linear-gradient(180deg, rgb(42, 168, 242) 0%, rgb(139, 212, 72) 17%, rgb(250, 228, 66) 34%, rgb(251, 169, 73) 53%, rgb(255, 99, 85) 72%, rgb(156, 79, 150) 100%);
 }
 
+.Header {
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  background-color: black;
+  box-shadow: 0px 17px 5px 6px rgba(0, 0, 0, 0.75);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  z-index: 1;
+}
+
+a {
+  color: white;
+  font-family: tandy;
+  font-size: 2em;
+  text-decoration: none;
+  transition: background 5s;
+}
+
+a:hover {
+  text-decoration: none;
+  background: linear-gradient(180deg, rgb(42, 168, 242) 0%, rgb(139, 212, 72) 17%, rgb(250, 228, 66) 34%, rgb(251, 169, 73) 53%, rgb(255, 99, 85) 72%, rgb(156, 79, 150) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.HeaderLinkContainer {
+  display: flex;
+  gap: 2rem;
+  margin-left: 10rem;
+}
+
+.ConnectContainer {
+  margin-right: 10rem;
+}
+
 @font-face {
   font-family: tandy;
   src: url(../assets/tandy.ttf);
@@ -11,12 +49,20 @@ body {
   font-family: ibm;
   src: url(../assets/ibm.ttf);
 }
+@font-face {
+  font-family: stingray;
+  src: url(../assets/stingray.ttf);
+}
+@font-face {
+  font-family: dg;
+  src: url(../assets/dg.ttf);
+}
 .HomePage {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 375vh;
+  height: 400vh;
   overflow-y: auto;
 }
 
@@ -177,10 +223,19 @@ body {
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
+.KillList {
+  height: 100vh;
+}
+
+.Snacker {
+  height: 100vh;
+}
+
 .DescriptionBox {
   display: flex;
-  width: 50vw;
-  height: 50vh;
+  flex-direction: column;
+  width: 55vw;
+  height: 60vh;
   background-color: rgba(128, 128, 128, 0.95);
   opacity: 95%;
   margin-top: 10rem;
@@ -192,6 +247,17 @@ body {
   overflow-wrap: break-word;
 }
 
+.DescriptionHeader {
+  width: 100%;
+  text-align: center;
+  font-family: dg;
+  font-weight: bold;
+  color: ghostwhite;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-size: 3.5em;
+  margin-bottom: 2rem;
+}
+
 .DescriptionText {
   font-family: tandy;
   font-size: 2em;
@@ -200,34 +266,15 @@ body {
 
 .PictureBox {
   display: flex;
-  width: 50vw;
-  height: 50vh;
-  background-color: #808080;
-  opacity: 95%;
-  box-shadow: 0px 17px 5px 6px rgba(0, 0, 0, 0.75);
-  margin-top: 10rem;
-  border: 1rem double black;
-  padding: 1rem;
-  justify-content: center;
-}
-
-.PictureBox2 {
-  display: flex;
-  width: 20rem;
+  width: 22rem;
   height: 20rem;
   background-color: rgba(128, 128, 128, 0.95);
   flex-direction: column;
   box-shadow: 0px 17px 5px 6px rgba(0, 0, 0, 0.75);
   border: 16px double black;
-  padding: 2rem;
+  padding: 2.5rem;
   justify-content: center;
   align-items: center;
-}
-
-.PictureText {
-  font-family: tandy;
-  font-size: 250%;
-  color: ghostwhite;
 }
 
 .ImageFix {
@@ -243,10 +290,12 @@ body {
   border: 1rem solid black;
 }
 
-.PictureBoxHeader {
-  font-family: tandy;
+.PictureHeader {
+  font-family: dg;
   font-size: 200%;
   color: ghostwhite;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  margin-bottom: 1rem;
 }
 
 .KillBox {
@@ -257,16 +306,17 @@ body {
   background-color: rgba(128, 128, 128, 0.95);
   opacity: 95%;
   box-shadow: 0px 17px 5px 6px rgba(0, 0, 0, 0.75);
-  padding: 1rem;
+  padding: 2rem;
   border: 16px double black;
   overflow-y: auto;
 }
 
 .KillHeader {
-  font-family: ibm;
+  font-family: dg;
   font-size: 250%;
   margin-bottom: 3rem;
   color: ghostwhite;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   text-align: center;
 }
 

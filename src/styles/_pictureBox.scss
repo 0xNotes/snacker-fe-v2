@@ -1,36 +1,17 @@
+
 .PictureBox {
-
   display: flex;
-  width: 50vw;
-  height: 50vh;
-  background-color: #808080;
-  opacity: 95%;
-
-  box-shadow: 0px 17px 5px 6px rgba(0, 0, 0, 0.75);
-  margin-top: 10rem;
-  border: 1rem double black;
-  padding: 1rem;
-  justify-content: center;
-}
-
-.PictureBox2 {
-  display: flex;
-  width: 20rem;
+  width: 22rem;
   height: 20rem;
   background-color: rgb(128, 128, 128, 0.95);
   flex-direction: column;
   box-shadow: 0px 17px 5px 6px rgba(0, 0, 0, 0.75);
   border: 16px double black;
-  padding: 2rem;
+  padding: 2.5rem;
   justify-content: center;
   align-items: center;
 }
 
-.PictureText {
-  font-family: tandy;
-  font-size: 250%;
-  color: ghostwhite;
-}
 
 .ImageFix {
   opacity: 100% !important;
@@ -45,8 +26,10 @@
   border: 1rem solid black;
 }
 
-.PictureBoxHeader {
-  font-family: tandy;
+.PictureHeader {
+  font-family: dg;
   font-size: 200%;
   color: ghostwhite;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  margin-bottom: 1rem;
 }

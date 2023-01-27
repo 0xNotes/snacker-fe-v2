@@ -1,7 +1,8 @@
 .DescriptionBox {
     display: flex;
-    width: 50vw;
-    height: 50vh;
+    flex-direction: column;
+    width: 55vw;
+    height: 60vh;
     background-color: rgb(128, 128, 128, 0.95);
     opacity: 95%;
     margin-top: 10rem;
@@ -15,10 +16,23 @@
     overflow-wrap: break-word;
 }
 
+.DescriptionHeader{
+    width: 100%;
+    text-align: center;
+    font-family: dg;
+    font-weight: bold;
+    color: ghostwhite;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+    font-size: 3.5em;
+    margin-bottom: 2rem;
+}
 
 .DescriptionText{
     font-family: tandy;
     //testing
     font-size: 2em;
     color: ghostwhite;
+    
+    
 }
