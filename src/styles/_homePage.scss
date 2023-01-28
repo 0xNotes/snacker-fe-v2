@@ -33,7 +33,7 @@
   @media (max-width: 1250px) {
     flex-direction: column;
     align-items: center;
-    gap: 5rem;    
+    gap: 5rem;
   }
 
   // @include respond(big-tablet) {
@@ -48,12 +48,25 @@
   justify-content: center;
 }
 
-.KillContainer{
+.KillContainer {
   display: flex;
   margin-top: 7rem;
   width: 80%;
   align-items: flex-start;
   justify-content: space-between;
+
+  @media (max-width: 1250px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+}
+
+.KillDetailsContainer{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
 }
 
 .Socials {
@@ -65,19 +78,55 @@
   background-color: black;
 }
 
-.Header {
+.Marquee {
+  --gap: 1rem;
   display: flex;
+  overflow: hidden;
+  user-select: none;
+  display: inline-block;
   justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  position: fixed;
-  background-color: black;
-  box-shadow: 0px 17px 5px 6px rgba(0, 0, 0, 0.75);
-  padding-top: 1.25rem;
-  padding-bottom: 1rem;
-  z-index: 1;
+  gap: var(--gap);
+  user-select: none;
 }
 
+.MarqueeInnerLeft {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-evenly;
+  min-height: 100%;
+  gap: var(--gap);
+  animation-name: marqueeAnimLeft;
+  animation-timing-function: linear;
+  animation-duration: 45s;
+  animation-iteration-count: infinite;
+  margin-left: 2rem;
+  user-select: none;
+}
+
+.MarqueeInnerRight {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-evenly;
+  min-height: 100%;
+  gap: var(--gap);
+  animation-name: marqueeAnimRight;
+  animation-timing-function: linear;
+  animation-duration: 45s;
+  animation-iteration-count: infinite;
+  margin-right: 2rem;
+  user-select: none;
+
+}
+
+.SnackerText {
+  white-space: nowrap;
+  font-family: ibm;
+  font-size: 800%;
+  color: ghostwhite;
+  writing-mode: vertical-rl;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  user-select: none;
+}
 
 @keyframes marqueeAnimLeft {
   from {
@@ -97,54 +146,4 @@
   to {
     transform: translateY(calc(-100% - var(--gap)));
   }
-}
-
-
-.Marquee {
-  --gap: 1rem;
-  display: flex;
-  overflow: hidden;
-  user-select: none;
-  display: inline-block;
-  justify-content: space-evenly;
-  gap: var(--gap);
-
-  
-}
-
-.MarqueeInnerLeft {
-  flex-shrink: 0;
-  display: flex;
-  justify-content: space-evenly;
-  min-height: 100%;
-  gap: var(--gap);
-  animation-name: marqueeAnimLeft;
-  animation-timing-function: linear;
-  animation-duration: 45s;
-  animation-iteration-count: infinite;
-  margin-left: 2rem;
-}
-
-.MarqueeInnerRight {
-  flex-shrink: 0;
-  display: flex;
-  justify-content: space-evenly;
-  min-height: 100%;
-  gap: var(--gap);
-  animation-name: marqueeAnimRight;
-  animation-timing-function: linear;
-  animation-duration: 45s;
-  animation-iteration-count: infinite;
-  margin-right: 2rem;
-}
-
-
-.SnackerText {
-  white-space: nowrap;
-  font-family: ibm;
-  font-size: 800%;
-  color: ghostwhite;
-  writing-mode: vertical-rl;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-
 }

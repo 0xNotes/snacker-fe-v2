@@ -8,6 +8,7 @@ import KillBox from "../components/KillBox";
 import ape from "../assets/contentImages/ape.png";
 import ape2 from "../assets/contentImages/ape2.png";
 import ape3 from "../assets/contentImages/ape3.png";
+import KillDetails from "../components/KillDetails";
 
 
 
@@ -65,7 +66,7 @@ export default function HomePage() {
 
       <div className="Header">
         <div className="HeaderLinkContainer">
-        <a href="https://www.google.com">Github</a>
+        <a href="https://github.com/0xNotes/snacker-fe-v2">Github</a>
         <a href="https://www.google.com">Medium</a>
         <a href="https://www.google.com">Discord</a>
         </div>
@@ -106,7 +107,10 @@ export default function HomePage() {
 
           <div className="KillContainer">
             <KillBox />
+            <div className="KillDetailsContainer">
             <PictureBox text="Recent Kills" image={ape} />
+            <KillDetails/>
+            </div>
           </div>
 
           {/* <div
