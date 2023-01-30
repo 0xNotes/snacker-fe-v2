@@ -3,12 +3,14 @@ import snacker from "../assets/snacker.png";
 import { useEffect, useState } from "react";
 import DescriptionBox from "../components/DescriptionBox";
 import PictureBox from "../components/PictureBox";
-import KillBox from "../components/KillBox";
+import KillDetails from "../components/KillDetails";
+import KillMiniDetails from "../components/KillMiniDetails";
+import KillList from "../components/KillList";
+
 
 import ape from "../assets/contentImages/ape.png";
 import ape2 from "../assets/contentImages/ape2.png";
 import ape3 from "../assets/contentImages/ape3.png";
-import KillDetails from "../components/KillDetails";
 
 
 
@@ -66,12 +68,12 @@ export default function HomePage() {
 
       <div className="Header">
         <div className="HeaderLinkContainer">
-        <a href="https://github.com/0xNotes/snacker-fe-v2">Github</a>
-        <a href="https://www.google.com">Medium</a>
-        <a href="https://www.google.com">Discord</a>
+          <a href="https://github.com/0xNotes/snacker-fe-v2">Github</a>
+          <a href="https://www.google.com">Medium</a>
+          <a href="https://www.google.com">Discord</a>
         </div>
         <div className="ConnectContainer">
-        <ConnectButton />
+          <ConnectButton />
         </div>
       </div>
 
@@ -106,11 +108,15 @@ export default function HomePage() {
           </div>
 
           <div className="KillContainer">
-            <KillBox />
+            <KillDetails />
             <div className="KillDetailsContainer">
-            <PictureBox text="Recent Kills" image={ape} />
-            <KillDetails/>
+              <PictureBox text="Recent Kills" image={ape} />
+              <KillMiniDetails />
             </div>
+          </div>
+          
+          <div className="KillListHomeContainer">
+          <KillList/>
           </div>
 
           {/* <div

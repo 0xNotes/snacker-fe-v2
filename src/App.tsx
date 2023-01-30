@@ -12,7 +12,7 @@ import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import HomePage from './pages/HomePage';
-import KillList from './pages/KillList';
+import KillListPage from './pages/KillListPage';
 import Snacker from './pages/Snacker';
 
 const { chains, provider } = configureChains(
@@ -42,7 +42,7 @@ function App() {
         <BrowserRouter>
         <Routes>
         <Route path ="/" element={<HomePage />}/>
-        <Route path ="/KillList" element={<KillList/>}/>
+        <Route path ="/KillList" element={<KillListPage/>}/>
         <Route path ="/Snacker" element={<Snacker/>}/>
         </Routes>
         </BrowserRouter>

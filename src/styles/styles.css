@@ -249,8 +249,28 @@ ORDER: Base + typography > general layout + grid > page layout > components
     transform: translateY(calc(-100% - var(--gap)));
   }
 }
-.KillList {
+.KillListPage {
   height: 100vh;
+}
+
+.KillListHomeContainer {
+  height: 80vh;
+  width: 85%;
+  border: 1px solid violet;
+}
+
+.KillList {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(128, 128, 128, 0.95);
+  margin-top: 10rem;
+  box-shadow: 0px 17px 5px 6px rgba(0, 0, 0, 0.75);
+  margin-top: 10rem;
+  padding: 2rem;
+  border: 16px double black;
+  height: 100%;
+  overflow-y: auto;
+  overflow-wrap: break-word;
 }
 
 .Snacker {
@@ -263,7 +283,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
   width: 55vw;
   height: 35rem;
   background-color: rgba(128, 128, 128, 0.95);
-  opacity: 95%;
   margin-top: 10rem;
   box-shadow: 0px 17px 5px 6px rgba(0, 0, 0, 0.75);
   margin-top: 10rem;
@@ -280,7 +299,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   font-weight: bold;
   color: ghostwhite;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  font-size: 3.5em;
+  font-size: 55px;
   margin-bottom: 2rem;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -290,7 +309,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .DescriptionText {
   font-family: tandy;
-  font-size: 2em;
+  font-size: 35px;
   color: ghostwhite;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -326,7 +345,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .PictureHeader {
   font-family: dg;
-  font-size: 200%;
+  font-size: 32px;
   color: ghostwhite;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   margin-bottom: 1rem;
@@ -336,35 +355,34 @@ ORDER: Base + typography > general layout + grid > page layout > components
           user-select: none;
 }
 
-.KillBox {
+.KillDetails {
   display: flex;
   flex-direction: column;
   width: 35vw;
   height: 35rem;
   background-color: rgba(128, 128, 128, 0.95);
-  opacity: 95%;
   box-shadow: 0px 17px 5px 6px rgba(0, 0, 0, 0.75);
   padding: 2rem;
   border: 16px double black;
   overflow-y: auto;
 }
 
-.KillHeader {
+.KillDetailsHeader {
   font-family: dg;
-  font-size: 250%;
+  font-size: 55px;
   margin-bottom: 3rem;
   color: ghostwhite;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   text-align: center;
 }
 
-.KillText {
+.KillDetailsText {
   font-family: tandy;
-  font-size: 200%;
+  font-size: 35px;
   color: ghostwhite;
 }
 
-.KillDetails {
+.KillMiniDetails {
   display: flex;
   background-color: rgba(128, 128, 128, 0.95);
   flex-direction: column;
@@ -375,7 +393,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   align-items: center;
   margin-top: auto;
   font-family: tandy;
-  font-size: 2em;
+  font-size: 30px;
   color: ghostwhite;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -383,9 +401,14 @@ ORDER: Base + typography > general layout + grid > page layout > components
           user-select: none;
 }
 @media (max-width: 1250px) {
-  .KillDetails {
+  .KillMiniDetails {
     flex-direction: column;
     align-items: center;
     margin-top: 3rem;
   }
+}
+
+.KillListItem {
+  background-color: ghostwhite;
+  height: 5rem;
 }/*# sourceMappingURL=styles.css.map */

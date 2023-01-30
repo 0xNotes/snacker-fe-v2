@@ -1,21 +1,26 @@
-.KillDetails{
+.KillDetails {
     display: flex;
-    background-color: rgb(128, 128, 128, 0.95);
     flex-direction: column;
+    width: 35vw;
+    height: 35rem;
+    background-color: rgb(128, 128, 128, 0.95);
     box-shadow: 0px 17px 5px 6px rgba(0, 0, 0, 0.75);
+    padding: 2rem;
     border: 16px double black;
-    padding: 2.5rem;
-    justify-content: center;
-    align-items: center;
-    margin-top: auto;
-    font-family: tandy;
-    font-size: 2em;
-    color: ghostwhite;
-    user-select: none;
+    overflow-y: auto;
+}
 
-    @media (max-width: 1250px) {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 3rem;
-      }
+.KillDetailsHeader{
+    font-family: dg;
+    font-size: 55px;
+    margin-bottom: 3rem;
+    color: ghostwhite;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-align: center;
+}
+
+.KillDetailsText{
+    font-family: tandy;
+    font-size: 35px;
+    color: ghostwhite;
 }
