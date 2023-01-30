@@ -250,24 +250,21 @@ ORDER: Base + typography > general layout + grid > page layout > components
   }
 }
 .KillListPage {
-  height: 100vh;
+  height: 80vh;
 }
 
 .KillListHomeContainer {
-  height: 80vh;
+  height: 75vh;
   width: 85%;
-  border: 1px solid violet;
 }
 
 .KillList {
   display: flex;
   flex-direction: column;
-  background-color: rgba(128, 128, 128, 0.95);
-  margin-top: 10rem;
+  background-color: rgba(13, 24, 33, 0.95);
   box-shadow: 0px 17px 5px 6px rgba(0, 0, 0, 0.75);
-  margin-top: 10rem;
   padding: 2rem;
-  border: 16px double black;
+  border: 16px double rgb(128, 128, 128);
   height: 100%;
   overflow-y: auto;
   overflow-wrap: break-word;
@@ -287,7 +284,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   box-shadow: 0px 17px 5px 6px rgba(0, 0, 0, 0.75);
   margin-top: 10rem;
   padding: 2rem;
-  border: 16px double black;
+  border: 16px double rgb(13, 24, 33);
   overflow-y: auto;
   overflow-wrap: break-word;
 }
@@ -324,7 +321,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   background-color: rgba(128, 128, 128, 0.95);
   flex-direction: column;
   box-shadow: 0px 17px 5px 6px rgba(0, 0, 0, 0.75);
-  border: 16px double black;
+  border: 16px double rgb(13, 24, 33);
   padding: 2.5rem;
   justify-content: center;
   align-items: center;
@@ -363,7 +360,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   background-color: rgba(128, 128, 128, 0.95);
   box-shadow: 0px 17px 5px 6px rgba(0, 0, 0, 0.75);
   padding: 2rem;
-  border: 16px double black;
+  border: 16px double rgb(13, 24, 33);
   overflow-y: auto;
 }
 
@@ -387,7 +384,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   background-color: rgba(128, 128, 128, 0.95);
   flex-direction: column;
   box-shadow: 0px 17px 5px 6px rgba(0, 0, 0, 0.75);
-  border: 16px double black;
+  border: 16px double rgb(13, 24, 33);
   padding: 2.5rem;
   justify-content: center;
   align-items: center;
@@ -409,6 +406,65 @@ ORDER: Base + typography > general layout + grid > page layout > components
 }
 
 .KillListItem {
-  background-color: ghostwhite;
+  background-color: rgb(128, 128, 128);
+  box-shadow: 4px 4px 0px 4px rgb(42, 168, 242);
   height: 5rem;
+}
+
+.KillListItem:hover {
+  box-shadow: 4px 4px 0px 4px rgb(42, 168, 242);
+  -webkit-animation-name: ShadowColor;
+          animation-name: ShadowColor;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes ShadowColor {
+  0% {
+    box-shadow: 4px 4px 0px 4px rgb(42, 168, 242);
+  }
+  25% {
+    box-shadow: 4px 4px 0px 4px rgb(139, 212, 72);
+  }
+  40% {
+    box-shadow: 4px 4px 0px 4px rgb(250, 228, 66);
+  }
+  55% {
+    box-shadow: 4px 4px 0px 4px rgb(251, 169, 73);
+  }
+  70% {
+    box-shadow: 4px 4px 0px 4px rgb(255, 99, 85);
+  }
+  85% {
+    box-shadow: 4px 4px 0px 4px rgb(156, 79, 150);
+  }
+  100% {
+    box-shadow: 4px 4px 0px 4px rgb(42, 168, 242);
+  }
+}
+
+@keyframes ShadowColor {
+  0% {
+    box-shadow: 4px 4px 0px 4px rgb(42, 168, 242);
+  }
+  25% {
+    box-shadow: 4px 4px 0px 4px rgb(139, 212, 72);
+  }
+  40% {
+    box-shadow: 4px 4px 0px 4px rgb(250, 228, 66);
+  }
+  55% {
+    box-shadow: 4px 4px 0px 4px rgb(251, 169, 73);
+  }
+  70% {
+    box-shadow: 4px 4px 0px 4px rgb(255, 99, 85);
+  }
+  85% {
+    box-shadow: 4px 4px 0px 4px rgb(156, 79, 150);
+  }
+  100% {
+    box-shadow: 4px 4px 0px 4px rgb(42, 168, 242);
+  }
 }/*# sourceMappingURL=styles.css.map */
