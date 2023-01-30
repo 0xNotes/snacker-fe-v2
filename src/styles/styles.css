@@ -17,7 +17,7 @@ body {
 }
 
 a {
-  color: white;
+  color: ghostwhite;
   font-family: tandy;
   font-size: 2em;
   text-decoration: none;
@@ -26,11 +26,61 @@ a {
 
 a:hover {
   text-decoration: none;
-  background: linear-gradient(180deg, rgb(42, 168, 242) 0%, rgb(139, 212, 72) 17%, rgb(250, 228, 66) 34%, rgb(251, 169, 73) 53%, rgb(255, 99, 85) 72%, rgb(156, 79, 150) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-animation-name: LinkColor;
+          animation-name: LinkColor;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
+@-webkit-keyframes LinkColor {
+  0% {
+    color: rgb(42, 168, 242);
+  }
+  25% {
+    color: rgb(139, 212, 72);
+  }
+  40% {
+    color: rgb(250, 228, 66);
+  }
+  55% {
+    color: rgb(251, 169, 73);
+  }
+  70% {
+    color: rgb(255, 99, 85);
+  }
+  85% {
+    color: rgb(156, 79, 150);
+  }
+  100% {
+    color: rgb(42, 168, 242);
+  }
+}
+
+@keyframes LinkColor {
+  0% {
+    color: rgb(42, 168, 242);
+  }
+  25% {
+    color: rgb(139, 212, 72);
+  }
+  40% {
+    color: rgb(250, 228, 66);
+  }
+  55% {
+    color: rgb(251, 169, 73);
+  }
+  70% {
+    color: rgb(255, 99, 85);
+  }
+  85% {
+    color: rgb(156, 79, 150);
+  }
+  100% {
+    color: rgb(42, 168, 242);
+  }
+}
 .HeaderLinkContainer {
   display: flex;
   gap: 2rem;
@@ -249,6 +299,29 @@ ORDER: Base + typography > general layout + grid > page layout > components
     transform: translateY(calc(-100% - var(--gap)));
   }
 }
+@keyframes LinkColor {
+  0% {
+    color: rgb(42, 168, 242);
+  }
+  25% {
+    color: rgb(139, 212, 72);
+  }
+  40% {
+    color: rgb(250, 228, 66);
+  }
+  55% {
+    color: rgb(251, 169, 73);
+  }
+  70% {
+    color: rgb(255, 99, 85);
+  }
+  85% {
+    color: rgb(156, 79, 150);
+  }
+  100% {
+    color: rgb(42, 168, 242);
+  }
+}
 .KillListPage {
   height: 80vh;
 }
@@ -256,6 +329,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 .KillListHomeContainer {
   height: 75vh;
   width: 85%;
+  margin-top: 7rem;
 }
 
 .KillList {
