@@ -541,4 +541,30 @@ ORDER: Base + typography > general layout + grid > page layout > components
   100% {
     box-shadow: 4px 4px 0px 4px rgb(42, 168, 242);
   }
+}
+.KillDetails {
+  display: flex;
+  flex-direction: column;
+  width: 35vw;
+  height: 35rem;
+  background-color: rgba(128, 128, 128, 0.95);
+  box-shadow: 0px 17px 5px 6px rgba(0, 0, 0, 0.75);
+  padding: 2rem;
+  border: 16px double rgb(13, 24, 33);
+  overflow-y: auto;
+}
+
+.KillDetailsHeader {
+  font-family: dg;
+  font-size: 55px;
+  margin-bottom: 3rem;
+  color: ghostwhite;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-align: center;
+}
+
+.KillDetailsText {
+  font-family: tandy;
+  font-size: 35px;
+  color: ghostwhite;
 }/*# sourceMappingURL=styles.css.map */
