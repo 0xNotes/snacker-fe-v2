@@ -340,8 +340,16 @@ ORDER: Base + typography > general layout + grid > page layout > components
   padding: 2rem;
   border: 16px double rgb(128, 128, 128);
   height: 100%;
+  gap: 1.25rem;
   overflow-y: auto;
   overflow-wrap: break-word;
+  overflow-x: hidden;
+}
+
+.TestBox {
+  display: flex;
+  height: 2rem;
+  margin-top: auto;
 }
 
 .Snacker {
@@ -483,6 +491,18 @@ ORDER: Base + typography > general layout + grid > page layout > components
   background-color: rgb(128, 128, 128);
   box-shadow: 4px 4px 0px 4px rgb(42, 168, 242);
   height: 5rem;
+  margin-left: -4px;
+  -webkit-animation: SlideIn;
+          animation: SlideIn;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  transition: all 0s;
 }
 
 .KillListItem:hover {
@@ -540,5 +560,21 @@ ORDER: Base + typography > general layout + grid > page layout > components
   }
   100% {
     box-shadow: 4px 4px 0px 4px rgb(42, 168, 242);
+  }
+}
+@-webkit-keyframes SlideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes SlideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
   }
 }/*# sourceMappingURL=styles.css.map */

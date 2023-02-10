@@ -16,9 +16,17 @@
     padding: 2rem;
     border: 16px double rgb(128, 128, 128);
     height: 100%;
+    gap: 1.25rem;
 
     //testing
     overflow-y: auto;
     overflow-wrap: break-word;
+    overflow-x: hidden;
 
+}
+
+.TestBox{
+    display: flex;
+    height: 2rem;
+    margin-top: auto;
 }
